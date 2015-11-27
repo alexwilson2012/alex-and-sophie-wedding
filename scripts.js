@@ -11,8 +11,8 @@
 				setTimeout(function(){
 					$whiteMask.remove();
 				}, 1000);
-			// }, 0);
-			}, 2000);
+			}, 0);
+			// }, 2000);
 		// });
 
 	$('.left-nav').on('click', '.nav-link', function(){

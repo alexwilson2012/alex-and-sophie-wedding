@@ -110,7 +110,7 @@ a:hover {
 	text-align: justify;
 	max-width: 600px;
 	margin: auto;
-	background: rgba(255, 255, 255, 0.57);
+	background: rgba(255, 255, 255, 0.77);
 	padding: 1vh 25px;
 	border-radius: 10px;
 	max-height: 48vh;
@@ -193,4 +193,72 @@ a:hover {
 }
 .tlv-text {
 	margin-top: 10px;
+}
+
+
+
+
+
+/* smaller desktop */
+@media (max-width: 1024px) {
+	.narrative {
+		max-width: 45vw;
+	}
+
+	/* Shrink down nav */
+	.li-pages {
+		font-size: 24px;
+		line-height: 32px;
+	}
+	.li-subpage {
+		font-size: 16px;
+		line-height: 24px;
+	}
+}
+
+/* tablet */
+@media (max-width: 768px) {
+	.core-wrap {
+		display: block;
+		height: auto;
+	}
+	.left-nav {
+		display: block;
+	}
+	.content-wrap {
+		display: block;
+	}
+
+	/* don't have double overflows */
+	.narrative {
+		max-height: none;
+	}
+	.content-wrap {
+		padding-bottom: 20px;
+	}
+
+	.narrative {
+		max-width: 80vw;
+	}
+
+	.loading-img {
+		width: 90vw;
+	}
+}
+
+/* definitely mobile */
+@media (max-width: 500px) {
+	.narrative {
+		text-align: left;
+	}
+	.tab {
+		display: none;
+	}
+	/* Shrink title banner */
+	.title-banner {
+		font-size: 28px;
+	}
+	.top-nav {
+		height: 8vh;
+	}
 }
