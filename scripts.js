@@ -21,6 +21,10 @@
 		location.hash = hash;
 	});
 
+	$('.menu').on('click', function(){
+		$('body').toggleClass('body-show-menu');
+	})
+
 	$(window).on('hashchange', renderPageFromHash);
 
 	var imageMap = {
@@ -33,6 +37,8 @@
 			.filter('[data-id="'+page+'"]').addClass('active');
 
 		$('.normal-background').css('background-image', imageMap[page] ? 'url("images/'+imageMap[page]+'")' : '');
+
+		$('body').removeClass('body-show-menu');
 	}
 
 	function renderPageFromHash() {

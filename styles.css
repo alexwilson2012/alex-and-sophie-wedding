@@ -59,7 +59,7 @@ a:hover {
 }
 
 .normal-background {
-	background: url(images/sitting.jpg) no-repeat center center fixed;
+	background: url(images/sitting.jpg) no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -72,7 +72,53 @@ a:hover {
 /* Framework and styles and things */
 
 
+
+/* Menu */
+.menu {
+	display: none;
+	padding: 0px 20px;
+	width: 20px;
+	top: 18px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+.menu-bar {
+	display: inline-block;
+	width: 20px;
+	height: 2px;
+	background: #717070;
+	margin-bottom: 4px;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	-o-transition: -o-transform 0.3s, opacity 0.3s;
+	opacity: 1;
+}
+.menu-bar:last-of-type {
+	margin-bottom: 0px;
+}
+
+.body-show-menu .menu-bar-1 {
+	/*transform: rotate(65deg) translate(0px, 15px);*/
+	transform: rotate(45deg) translate(2.2px, 6px);
+	-webkit-transform: rotate(45deg) translate(2.2px, 6px);
+	-moz-transform: rotate(45deg) translate(2.2px, 6px);
+	-o-transform: rotate(45deg) translate(2.2px, 6px);
+}
+.body-show-menu .menu-bar-2 {
+	opacity: 0;
+}
+.body-show-menu .menu-bar-3 {
+	/*transform: rotate(-65deg) translate(9px, 8px);*/
+	transform: rotate(-45deg) translate(3px, -6px);
+	-webkit-transform: rotate(-45deg) translate(3px, -6px);
+	-moz-transform: rotate(-45deg) translate(3px, -6px);
+	-o-transform: rotate(-45deg) translate(3px, -6px);
+}
+
+
 .top-nav {
+	position: relative;
 	background: rgba(207, 222, 224, 0.58);
 	height: 10vh;
 	display: table;
@@ -83,7 +129,7 @@ a:hover {
 .title-banner {
 	display: table-cell;
 	vertical-align: middle;
-	padding-left: 5vh;
+	padding: 0 5vw;
 	font-size: 40px;
 	font-weight: 300;
 	color: #717070;
@@ -218,13 +264,24 @@ a:hover {
 
 /* tablet */
 @media (max-width: 768px) {
+	.menu {
+		display: table-cell;
+	}
 	.core-wrap {
 		display: block;
 		height: auto;
 	}
 	.left-nav {
+		display: none;
+	}
+
+	.body-show-menu .left-nav {
 		display: block;
 	}
+	.body-show-menu .content-wrap {
+		display: none;
+	}
+
 	.content-wrap {
 		display: block;
 	}
