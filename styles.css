@@ -119,9 +119,7 @@ a:hover {
 
 .top-nav {
 	position: relative;
-	background: rgba(207, 222, 224, 0.58);
 	height: 10vh;
-	display: table;
 	width: 100vw;
 	margin: 5vh 0;
 }
@@ -133,12 +131,73 @@ a:hover {
 	font-size: 40px;
 	font-weight: 300;
 	color: #717070;
+	color: #FFF;
 }
+
+
+/* Sophie's nav styles */
+.top-nav {
+	display: table;
+}
+.banner-image {
+	text-align: center;
+	width: 200px;
+}
+.banner-left, .banner-image, .banner-right {
+	display: table-cell;
+	vertical-align: middle;
+}
+.banner-logo {
+	max-height: 140px;
+	margin: -30px 0px;
+}
+.banner-text {
+	color: white;
+	font-size: 34px;
+	font-weight: 300;
+	padding: 0px 40px;
+}
+.banner-left {
+	width: 80%;
+	width: calc(100% - 240px);
+}
+.banner-right {
+	width: 40px;
+}
+/*.normal-background {
+	background: #FFF !important;
+}*/
+/* End sophie's nav styles */
+
+
+.top-nav-inner {
+	display: table;
+	max-width: 1200px;
+	margin: auto;
+	width: 100%;
+}
+
+/* NEW STYLES */
+.top-nav {
+	margin: 0px;
+	background: rgba(255, 255, 255, 0.58);
+}
+.banner-logo {
+	margin: 10px 0px;
+	max-height: 80px;
+}
+.banner-text {
+	color: #555;
+}
+/* END NEW STYLES */
+
 
 .core-wrap {
 	display: table;
 	width: 100vw;
-	height: 50vh;
+	height: 70vh;
+	max-width: 1200px;
+	margin: auto;
 }
 
 .left-nav {
@@ -150,16 +209,15 @@ a:hover {
 .content-wrap {
 	display: table-cell;
 	vertical-align: middle;
+	padding: 40px;
 }
 
 .narrative {
 	text-align: justify;
-	max-width: 600px;
 	margin: auto;
 	background: rgba(255, 255, 255, 0.77);
 	padding: 1vh 25px;
-	border-radius: 10px;
-	max-height: 48vh;
+	max-height: 70vh;
 	overflow: auto;
 }
 
@@ -247,10 +305,6 @@ a:hover {
 
 /* smaller desktop */
 @media (max-width: 1024px) {
-	.narrative {
-		max-width: 45vw;
-	}
-
 	/* Shrink down nav */
 	.li-pages {
 		font-size: 24px;
@@ -275,6 +329,13 @@ a:hover {
 		display: none;
 	}
 
+	.banner-left, .banner-right {
+		display: none;
+	}
+	.banner-image {
+		display: inline-block;
+	}
+
 	.body-show-menu .left-nav {
 		display: block;
 	}
@@ -284,14 +345,12 @@ a:hover {
 
 	.content-wrap {
 		display: block;
+		padding: 20px;
 	}
 
 	/* don't have double overflows */
 	.narrative {
 		max-height: none;
-	}
-	.content-wrap {
-		padding-bottom: 20px;
 	}
 
 	.narrative {
