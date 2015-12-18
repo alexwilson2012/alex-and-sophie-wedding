@@ -10,7 +10,8 @@ a {
 	font-weight: 100;
 	color: black;
 }
-a:hover {
+a:hover,
+.nav-link.active {
 	color: rgb(71, 96, 99);
 }
 
@@ -222,11 +223,13 @@ a:hover {
 }
 
 .li-pages {
-	cursor: pointer;
 	line-height: 50px;
 	font-size: 30px;
 	list-style: none;
 	font-weight: 100;
+}
+.nav-link {
+	cursor: pointer;
 }
 .nav-link:hover,
 .nav-link:hover {
@@ -301,6 +304,58 @@ a:hover {
 
 
 
+.mobile-next-nav {
+	display: none;
+	padding: 0px 20px;
+	margin: auto;
+	margin-bottom: 20px;
+}
+.mobile-next-btn {
+	display: inline-block;
+	background: rgb(164, 194, 204);
+	padding: 14px 19px;
+	box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+	width: 30vw;
+	white-space: nowrap;
+	font-weight: 300;
+	cursor: pointer;
+}
+.mobile-next-btn:empty {
+	padding: 0px;
+}
+.mobile-table {
+	display: table;
+	width: 100%;
+}
+
+.mobile-table-cell {
+	display: table-cell;
+	text-align: center;
+	vertical-align: top;
+}
+.rsaquo, .lsaquo {
+	position: relative;
+	font-size: 30px;
+	font-weight: 300;
+	top: 2px;
+}
+.rsaquo {
+	right: 25px;
+	margin-right: -16px;
+}
+.lsaquo {
+	left: 25px;
+	margin-left: -16px;
+}
+.mobile-next-btn:empty + .rsaquo,
+.mobile-next-btn:empty + .lsaquo {
+	display: none;
+}
+.hide-mobile-nav .lsaquo {
+	display: none;
+}
+
+
 
 
 /* smaller desktop */
@@ -353,12 +408,15 @@ a:hover {
 		max-height: none;
 	}
 
-	.narrative {
-		max-width: 80vw;
-	}
-
 	.loading-img {
 		width: 90vw;
+	}
+
+	.mobile-next-nav {
+		display: block;
+	}
+	.body-show-menu .mobile-next-nav {
+		display: none;
 	}
 }
 
