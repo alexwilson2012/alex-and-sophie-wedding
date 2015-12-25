@@ -185,7 +185,7 @@ a:hover,
 }
 .banner-logo {
 	margin: 10px 0px;
-	max-height: 80px;
+	max-height: 10vh;
 }
 .banner-text {
 	color: #555;
@@ -196,7 +196,8 @@ a:hover,
 .core-wrap {
 	display: table;
 	width: 100vw;
-	height: 70vh;
+	height: 80vh;
+	height: calc(90vh - 20px);
 	max-width: 1200px;
 	margin: auto;
 }
@@ -218,8 +219,6 @@ a:hover,
 	margin: auto;
 	background: rgba(255, 255, 255, 0.77);
 	padding: 1vh 25px;
-	max-height: 70vh;
-	overflow: auto;
 }
 
 .li-pages {
@@ -247,6 +246,8 @@ a:hover,
 
 .nav-content {
 	display: none;
+	max-height: 100%;
+	overflow: auto;
 }
 .nav-content.active {
 	display: block;
@@ -257,6 +258,9 @@ a:hover,
 	padding: 15px 0px 0px 15px;
 	-webkit-filter: grayscale(100%);
 	opacity: 0.8;
+}
+.content-love-story .narrative-img-wrap {
+	width: 90px;
 }
 .narrative-img {
 	max-width: 100%;
@@ -356,6 +360,78 @@ a:hover,
 }
 
 
+.countdown-wrap {
+	text-align: center;
+	margin-top: 100px;
+}
+.countdown {
+	display: inline-block;
+	margin: auto;
+	font-size: 24px;
+	font-weight: 300;
+	background: rgba(255, 255, 255, 0.58);
+	padding: 15px;
+	border-radius: 1px;
+}
+.countdown-text {
+	font-style: italic;
+	margin-top: 5px;
+}
+
+
+
+
+.gift-wrap {
+	margin-top: 300px;
+}
+.registry-wrap {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+	margin-top: 5px;
+}
+
+.registry-store {
+	display: table-cell;
+	width: 33.3333%;
+	vertical-align: middle;
+}
+
+.registry-item {
+	margin: 5px;
+	background: #FFF;
+	padding: 10px;
+	height: 35px;
+	opacity: 0.77;
+	text-align: center;
+	display: table;
+}
+.registry-store:first-child .registry-item {
+	margin-left: 0px;
+}
+.registry-store:last-child .registry-item {
+	margin-right: 0px;
+}
+.registry-image {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.registry-image img {
+	max-width: 95%;
+	vertical-align: middle;
+	display: table-cell;
+}
+
+
+
+
+/**
+ * Mappin
+ */
+.map-frame {
+	margin-top: 20px;
+}
 
 
 /* smaller desktop */
@@ -368,6 +444,9 @@ a:hover,
 	.li-subpage {
 		font-size: 16px;
 		line-height: 24px;
+	}
+	.countdown {
+		font-size: 20px;
 	}
 }
 
@@ -403,6 +482,10 @@ a:hover,
 		padding: 20px;
 	}
 
+	.nav-content {
+		max-height: none;
+	}
+
 	/* don't have double overflows */
 	.narrative {
 		max-height: none;
@@ -418,7 +501,52 @@ a:hover,
 	.body-show-menu .mobile-next-nav {
 		display: none;
 	}
+	.countdown-wrap {
+		margin: 30px;
+	}
+	.gift-wrap {
+		margin-top: 0;
+	}
 }
+
+
+/**
+ * Wedding activity list
+ */
+.wed-activity-header {
+	font-size: 24px;
+	font-weight: 300;
+	padding-top: 15px;
+}
+.wed-activity-wrap {
+	margin-top: 15px;
+	border-top: 1px solid #aaa;
+	padding-top: 15px;
+	text-align: left;
+}
+.wed-activity-date {
+	font-style: italic;
+	font-weight: 300;
+	font-size: 14px;
+	margin-bottom: 3px;
+	display: block;
+}
+.wed-activity {
+	line-height: 22px;
+}
+.wed-activity-time {
+	font-size: 14px;
+	font-weight: bold;
+}
+.wed-activity-header + .wed-activity-wrap {
+	border-top: none;
+	padding-top: 0px;
+}
+.wed-activity-wrap:last-child {
+	padding-bottom: 15px;
+}
+
+
 
 /* definitely mobile */
 @media (max-width: 500px) {
@@ -434,5 +562,8 @@ a:hover,
 	}
 	.top-nav {
 		height: 8vh;
+	}
+	.countdown {
+		font-size: 14px;
 	}
 }

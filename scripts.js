@@ -6,12 +6,12 @@
 	// 	.on('load', function(){
 
 
-			setTimeout(function(){
+			// setTimeout(function(){
 				$whiteMask.addClass('hide');
 				setTimeout(function(){
 					$whiteMask.remove();
 				}, 1000);
-			}, 0);
+			// }, 0);
 			// }, 2000);
 		// });
 
@@ -46,10 +46,12 @@
 		} else {
 			$('.mobile-next-btn[data-dir="back"]').text('').parent().addClass('hide-mobile-nav');
 		}
-		if (navLinkIndex < $navLinks.length) {
+		if (navLinkIndex < $navLinks.length - 1) {
 			$('.mobile-next-btn[data-dir="forward"]')
 				.html($navLinks.eq(navLinkIndex + 1).html())[0]
 				.setAttribute('data-id', $navLinks.eq(navLinkIndex + 1).data('id'));
+		} else {
+			$('.mobile-next-btn[data-dir="forward"]').text('');
 		}
 	}
 
@@ -84,5 +86,55 @@
 	}, 500);
 
 	renderPageFromHash();
+
+})();
+
+(function(){
+
+	var date_of_our_wedding = new Date('August 28, 2016 17:00'),
+		countable_time = {};
+
+	function getPrettyTime(num, stringSingular, isLast) {
+		if (!isLast && !num) {
+			return '';
+		}
+
+		return num + ' ' + stringSingular + (num === 1 ? '' : 's')
+			+(!isLast ? ', ' : '');
+	}
+
+	function updateCounter() {
+		var today = new Date(),
+			millisecond_difference = date_of_our_wedding - today;
+		countable_time.seconds = millisecond_difference/1000 >> 0;
+		countable_time.minutes = countable_time.seconds/60 >> 0;
+		countable_time.hours = countable_time.minutes/60 >> 0;
+		countable_time.days = countable_time.hours/24 >> 0;
+		countable_time.weeks = countable_time.days/7 >> 0;
+
+		$('#time').html('');
+		$('#time')
+			// .append(countable_time.weeks.toLocaleString() + ' weeks<br>')
+			// .append(countable_time.days.toLocaleString() + ' days<br>')
+			// .append(countable_time.hours.toLocaleString() + ' hours<br>')
+			// .append((countable_time.hours % 24) + ' hours modulo<br>')
+			// .append(countable_time.minutes.toLocaleString() + ' minutes<br>')
+			// .append((countable_time.minutes % 60) + ' minutes modulo<br>')
+			// .append(countable_time.seconds.toLocaleString() + ' seconds<br>')
+			// .append((countable_time.seconds % 60) + ' seconds modulo<br>')
+			.append(
+				// '<br>'+
+				getPrettyTime(countable_time.days, 'day')+
+				getPrettyTime(countable_time.hours % 24, 'hour')+
+				getPrettyTime(countable_time.minutes % 60, 'minute')+
+				getPrettyTime(countable_time.seconds % 60, 'second', true)
+			);
+	}
+
+	updateCounter();
+
+	setInterval(function(){
+		updateCounter();
+	}, 1000);
 
 })();
