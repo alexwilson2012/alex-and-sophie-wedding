@@ -91,7 +91,7 @@
 
 (function(){
 
-	var date_of_our_wedding = new Date('August 28, 2016 17:00'),
+	var date_of_our_wedding = new Date('August 28, 2016 22:00 GMT'),
 		countable_time = {};
 
 	function getPrettyTime(num, stringSingular, isLast) {
