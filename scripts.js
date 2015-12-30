@@ -19,6 +19,9 @@
 		var hash = this.getAttribute('data-id');
 		renderPage(hash);
 		location.hash = hash;
+
+		// Scroll to the top (for mobile)
+		$(window).scrollTop(0);
 	}
 
 	$('.left-nav').on('click', '.nav-link', changePageFromDataId);
