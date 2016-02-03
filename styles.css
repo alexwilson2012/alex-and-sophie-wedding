@@ -250,7 +250,7 @@ a:hover,
 	overflow: auto;
 }
 .nav-content.active {
-	display: inline-block;
+	display: table;
 }
 .narrative-img-wrap {
 	width: 120px;
