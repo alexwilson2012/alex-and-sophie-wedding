@@ -140,4 +140,79 @@
 		updateCounter();
 	}, 1000);
 
+
+	if (location.search.search('test=true') === -1) {
+		return;
+	}
+
+	$('.stripe-hide').addClass('active');
+
+
+	/**
+	 * Payment
+	 */
+	var stripeHandler = StripeCheckout.configure({
+		key: 'pk_test_gQjB92ViPeKW1EHMenJmKOBB',
+		image: '/images/tiny_save_date.png',
+		locale: 'auto',
+		token: function(token) {
+			$.post('https://alexandsophiewedding.com/payment', {
+				email: token.email,
+				token: token.id,
+				amount: getPaymentAmount() * 100
+			}).done(function(){
+				$('.stripe-form').html('Payment successful! Thanks!');
+			}).fail(function(){
+				alert('Uh oh. Something went wrong and your payment didn\'t go through.'+
+					' Please contact Alex at alexandsophiewedding2016@gmail.com');
+			});
+		}
+	});
+
+	var $payButtonTotal = $('.pay-button-total'),
+		$stripeForm = $('.stripe-form');
+
+	function getPaymentAmount() {
+		var totals = $stripeForm.find('.pay-quantity').map(function(){
+				return Math.floor(this.value) * this.getAttribute('data-val');
+			}).toArray();
+
+		return totals.reduce(function(pv, cv) { return pv + cv; }, 0);
+	}
+
+	$stripeForm
+		.on('keyup change input', '.pay-quantity', function(){
+			var paymentDue = getPaymentAmount();
+			$payButtonTotal.text(paymentDue.toFixed(2));
+
+			$('#stripe-pay-btn').toggleClass('active', paymentDue > 100);
+		})
+		.on('click', '#stripe-pay-btn', function(e){
+			var paymentDue = getPaymentAmount();
+			if (paymentDue === 0) {
+				alert('Please enter the number of guests you would like to pay for.');
+				return;
+			}
+
+			var description = $stripeForm.find('.pay-quantity').map(function(){
+				var val = Math.floor(this.value);
+				if (!val) {
+					return '';
+				}
+				return val + ' ' + this.getAttribute('data-desc') + (val > 1 ? 's' : '');
+			}).toArray().filter(function(d){return d;}).join(', ');
+
+			stripeHandler.open({
+				name: 'Accomodations at TLV',
+				description: description,
+				amount: paymentDue * 100
+			});
+			e.preventDefault();
+		});
+
+	// Close Checkout on page navigation
+	$(window).on('popstate', function() {
+		stripeHandler.close();
+	});
+
 })();

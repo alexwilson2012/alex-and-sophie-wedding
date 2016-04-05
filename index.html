@@ -202,8 +202,29 @@
 			</div>
 			<div class="nav-content" data-id="accomodations">
 				<div class="narrative">
-					<p>Please check back in February 2016 to make accommodations for your stay at Twin Lake Village through our wedding website!</p>
-					<p>We have reserved the property at Twin Lake Village from Saturday (August 27th) afternoon through Monday (August 29th) morning. There is a special rate of $100 per night ($85 for children) per guest for our wedding weekend at TLV. This rate includes access to the facilities (golf, boating equipment, use of the lake, tennis courts, shuffleboard, etc), as well as breakfast on Sunday and Monday morning.</p>
+					<p>We have reserved the property at Twin Lake Village from Saturday (August 27th) afternoon through Monday (August 29th) morning. There is a special rate of <b>$100 per night</b> ($85 for children 2 - 5) <b>per guest</b> for our wedding weekend at TLV. This rate includes access to the facilities (golf, boating equipment, use of the lake, tennis courts, shuffleboard, etc), as well as breakfast on Sunday and Monday morning.</p>
+					<p class="stripe-hide">Twin Lake Village only accepts checks (no credit cards) so we have setup an online payment method for your convenience using <a target="_blank" href="https://stripe.com/">Stripe</a>.</p>
+					<div class='stripe-form stripe-hide'>
+						<div class="pay-opt-wrap">
+							<div class="pay-opt">
+								<input type="number" class="pay-quantity" data-val="206" data-desc="adult" value="0" min="0"/>
+								<div class="pay-price">$206</div>
+								<div class="pay-label">&nbsp;-&nbsp;Adult 2 nights</div>
+							</div>
+							<div class="pay-opt">
+								<input type="number" class="pay-quantity" data-val="175" data-desc="kid" value="0" min="0"/>
+								<div class="pay-price">$175</div>
+								<div class="pay-label">&nbsp;-&nbsp;Child 2 nights (ages 2 - 5)</div>
+							</div>
+						</div>
+						<div class="pay-note">Stripe charges a 2.9% + $0.30 service fee which we have included in the above totals.</div>
+						<div class="pay-button-wrap">
+							<div class="pay-button-total-wrap">
+								<span class="pay-button-prefix">$</span> <span class="pay-button-total">0.00</span>
+							</div>
+							<div id="stripe-pay-btn">Pay with Card</div>
+						</div>
+					</div>
 					<p>After you have made your reservation on our website, Sophie and Alex will be working to accommodate all guests in hotel rooms or cottages on the property. If you would prefer to stay elsewhere during the weekend in New London, please contact us directly (<a href="mailto:alexandsophiewedding2016@gmail.com">alexandsophiewedding2016@gmail.com</a>) and we will give you some ideas for alternative accommodations.</p>
 					<p>Twin Lake Village is a special place. One of our favorite things about staying here is being removed from the stresses of our every day lives! TLV is a cozy but rustic place. All cottages have fully functioning kitchens and lots of room for guests to spread out. However, there are no TVs in the cottages or hotel rooms (not that it matters because you’ll be busy doing activities and spending time with us anyway!). WiFi is available, but only in the hotel lobby. Cell service is very reliable, so you won’t need to worry about not being able to document the whole weekend on Facebook and Instagram ;)</p>
 				</div>
@@ -322,7 +343,8 @@
 			<img src="images/flower_circle_logo_smaller.png" class="loading-img">
 		</div>
 	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script src="https://checkout.stripe.com/checkout.js"></script>
 	<script type="text/javascript" src="scripts.js"></script>
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');

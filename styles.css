@@ -430,6 +430,71 @@ a:hover,
 
 
 
+
+
+/**
+ * Payment
+ */
+
+.pay-opt-wrap {
+	display: table;
+}
+.pay-opt {
+	display: table-row;
+}
+.pay-label, .pay-quantity, .pay-price {
+	display: table-cell;
+}
+.pay-quantity {
+	width: 35px;
+	margin: 0 5px;
+	text-indent: 5px;
+}
+.pay-button-wrap {
+	display: table;
+	width: 100%;
+}
+.pay-button-total-wrap {
+	display: inline-block;
+	width: 100px;
+}
+#stripe-pay-btn {
+	display: inline-block;
+	padding: 8px;
+	border: 1px solid;
+	color: #777;
+}
+#stripe-pay-btn.active {
+	cursor: pointer;
+	background: #fff;
+	color: #A5BE91;
+}
+.stripe-form {
+	border: 1px solid #aaa;
+	background: #f5f5f5;
+	padding: 10px;
+	margin: auto;
+	display: block;
+	max-width: 300px;
+	border-radius: 5px;
+}
+.pay-note {
+	font-style: italic;
+	font-size: 12px;
+	margin: 10px 5px;
+	max-width: 250px;
+	text-align: left;
+}
+.stripe-hide {
+	display: none;
+}
+.stripe-hide.active {
+	display: inherit;
+}
+
+
+
+
 /**
  * Mappin
  */
