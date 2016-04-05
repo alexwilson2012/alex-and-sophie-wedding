@@ -156,7 +156,7 @@
 		image: '/images/tiny_save_date.png',
 		locale: 'auto',
 		token: function(token) {
-			$.post('https://alexandsophiewedding.com/payment', {
+			$.post('https://alexandsophiewedding.com/payment/', {
 				email: token.email,
 				token: token.id,
 				amount: getPaymentAmount() * 100
