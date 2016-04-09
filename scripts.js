@@ -151,15 +151,18 @@
 	/**
 	 * Payment
 	 */
+	var globalDescription = '';
 	var stripeHandler = StripeCheckout.configure({
 		key: 'pk_test_gQjB92ViPeKW1EHMenJmKOBB',
 		image: '/images/tiny_save_date.png',
 		locale: 'auto',
+		allowRememberMe: false,
 		token: function(token) {
 			$.post('https://alexandsophiewedding.com/payment/', {
 				email: token.email,
 				token: token.id,
-				amount: getPaymentAmount() * 100
+				amount: getPaymentAmount() * 100,
+				description: 'Two night stay at Twin Lake Villa for '+globalDescription
 			}).done(function(){
 				$('.stripe-form').html('Payment successful! Thanks!');
 			}).fail(function(){
@@ -201,6 +204,8 @@
 				}
 				return val + ' ' + this.getAttribute('data-desc') + (val > 1 ? 's' : '');
 			}).toArray().filter(function(d){return d;}).join(', ');
+
+			globalDescription = description;
 
 			stripeHandler.open({
 				name: 'Accomodations at TLV',
