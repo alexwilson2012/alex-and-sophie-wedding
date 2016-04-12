@@ -475,7 +475,8 @@ a:hover,
 	padding: 10px;
 	margin: auto;
 	display: block;
-	max-width: 300px;
+	max-width: 310px;
+	line-height: 20px;
 	text-align: left;
 	border-radius: 5px;
 }

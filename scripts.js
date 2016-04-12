@@ -141,9 +141,9 @@
 	}, 1000);
 
 
-	if (location.search.search('test=true') === -1) {
-		return;
-	}
+	// if (location.search.search('test=true') === -1) {
+	// 	return;
+	// }
 
 	$('.stripe-hide').addClass('active');
 
@@ -153,7 +153,7 @@
 	 */
 	var globalDescription = '';
 	var stripeHandler = StripeCheckout.configure({
-		key: 'pk_test_gQjB92ViPeKW1EHMenJmKOBB',
+		key: 'pk_live_xKu8eqvXFKLLwOOrtZ0kQIPN',
 		image: '/images/tiny_save_date.png',
 		locale: 'auto',
 		allowRememberMe: false,
