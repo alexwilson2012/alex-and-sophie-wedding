@@ -476,6 +476,7 @@ a:hover,
 	margin: auto;
 	display: block;
 	max-width: 300px;
+	text-align: left;
 	border-radius: 5px;
 }
 .pay-note {

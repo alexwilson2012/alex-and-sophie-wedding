@@ -164,7 +164,9 @@
 				amount: getPaymentAmount() * 100,
 				description: 'Two night stay at Twin Lake Villa for '+globalDescription
 			}).done(function(){
-				$('.stripe-form').html('Payment successful! Thanks!');
+				$('.stripe-form').html('Payment successful! You will receive an email receipt shortly.'+
+					' Please contact us at <a href="mailto:alexandsophiewedding2016@gmail.com">alexandsophiewedding2016@gmail.com</a> if you have any questions.'+
+					' We can\'t wait to see you at our wedding!');
 			}).fail(function(){
 				alert('Uh oh. Something went wrong and your payment didn\'t go through.'+
 					' Please contact Alex at alexandsophiewedding2016@gmail.com');
