@@ -7,8 +7,7 @@ html {
 
 a {
 	text-decoration: none;
-	font-weight: 100;
-	color: black;
+	color: #527959;
 }
 a:hover,
 .nav-link.active {
