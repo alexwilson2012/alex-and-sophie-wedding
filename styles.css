@@ -495,6 +495,107 @@ a:hover,
 
 
 
+/**
+ * Wedding Party
+ */
+
+.nav-content-wedding-party {
+	width: 100%;
+}
+.wedding-party-table {
+	margin: auto;
+}
+.wedding-party-grouping {
+	display: table-cell;
+	width: 50%;
+}
+.wedding-party-grouping.bridesmaids {
+	padding-right: 20px;
+}
+.wedding-party-grouping.groomsmen {
+	padding-left: 20px;
+}
+.wedding-party-title {
+	font-size: 20px;
+	font-weight: 300;
+	margin: 5px 0 10px;
+}
+.wedding-party-wrap {
+	display: table;
+	text-align: left;
+	margin-bottom: 10px;
+}
+.wedding-party-bkg-img {
+	width: 70px;
+	height: 70px;
+	background-position: center center;
+	background-size: cover;
+}
+.wedding-party-bkg-mask {
+	border-radius: 50px;
+	display: inline-block;
+	overflow: hidden;
+}
+.wedding-party-info-wrap {
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 20px;
+}
+.wedding-party-name {
+	font-weight: bold;
+}
+.wedding-party-name-qualifier {
+	font-size: 12px;
+}
+.wedding-party-desc {
+	margin-top: 10px;
+}
+
+/* Ushers */
+.wedding-party-table {
+	display: table;
+}
+.wedding-party-row {
+	display: table-row;
+}
+.wedding-party-ushers {
+	margin-top: 40px;
+}
+.wedding-party-ushers .narrative {
+	margin-top: 20px;
+}
+.usher-image {
+	width: 100%;
+	height: 80px;
+	background-size: cover;
+	background-position: center center;
+}
+.usher-mask {
+	overflow: hidden;
+	border-radius: 10px;
+}
+.usher-text {
+	margin-top: 10px;
+}
+
+/* Usher v2 */
+.usher-v2 {
+	width: 100%;
+}
+.usher-v2 .usher-mask {
+	display: table-cell;
+	width: 50%;
+}
+.usher-v2 .usher-text {
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 20px;
+	text-align: center;
+}
+.usher-amp {
+	font-weight: 300;
+}
+
 
 /**
  * Mappin
@@ -635,5 +736,13 @@ a:hover,
 	}
 	.countdown {
 		font-size: 14px;
+	}
+	.wedding-party-grouping {
+		display: table-row;
+	}
+	.usher-v2 .usher-mask {
+		width: 100%;
+		display: table-caption;
+		margin-bottom: 15px;
 	}
 }
