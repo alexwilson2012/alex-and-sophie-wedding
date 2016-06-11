@@ -83,7 +83,7 @@ a:hover,
 	cursor: pointer;
 }
 .menu-bar {
-	display: inline-block;
+	display: block;
 	width: 20px;
 	height: 2px;
 	background: #717070;
@@ -624,7 +624,10 @@ a:hover,
 /* tablet */
 @media (max-width: 768px) {
 	.menu {
-		display: table-cell;
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 45px;
 	}
 	.core-wrap {
 		display: block;
@@ -733,6 +736,9 @@ a:hover,
 	}
 	.top-nav {
 		height: 8vh;
+	}
+	.menu {
+		top: 5vh;
 	}
 	.countdown {
 		font-size: 14px;
