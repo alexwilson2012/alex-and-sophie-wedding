@@ -32,6 +32,13 @@
 
 	$('.mobile-next-nav').on('click', '.mobile-next-btn', changePageFromDataId);
 
+	$('.book-accomodations').on('click', function(){
+		changePageFromDataId.call({
+			getAttribute: function(){
+				return 'accomodations';
+			}
+		});
+	});
 
 	function updateMobileNavLinks() {
 		var $activeLink = $('.nav-content.active'),
@@ -71,7 +78,8 @@
 
 		$('.normal-background').css('background-image', imageMap[page] ? 'url("images/'+imageMap[page]+'")' : '');
 
-		$('body').removeClass('body-show-menu');
+		$('body').removeClass('body-show-menu')
+			.find('.contact-us-dropdown').css('display', page === '' ? '' : 'none');
 
 		updateMobileNavLinks();
 	}

@@ -8,10 +8,12 @@ html {
 a {
 	text-decoration: none;
 	color: #527959;
+	/*color: rgb(64, 64, 63);*/
 }
 a:hover,
 .nav-link.active {
-	color: rgb(71, 96, 99);
+	/*color: rgb(71, 96, 99);*/
+	color: rgb(64, 64, 63);
 }
 
 /* Mask and things */
@@ -231,7 +233,8 @@ a:hover,
 }
 .nav-link:hover,
 .nav-link:hover {
-	color: rgb(71, 96, 99);
+	/*color: rgb(71, 96, 99);*/
+	color: rgb(64, 64, 63);
 }
 
 
@@ -361,12 +364,12 @@ a:hover,
 
 .countdown-wrap {
 	text-align: center;
-	margin-top: 100px;
+	margin-top: 30px;
 }
 .countdown {
 	display: inline-block;
 	margin: auto;
-	font-size: 24px;
+	font-size: 16px;
 	font-weight: 300;
 	background: rgba(255, 255, 255, 0.58);
 	padding: 15px;
@@ -681,6 +684,10 @@ a:hover,
 	.gift-wrap {
 		margin-top: 0;
 	}
+
+	.contact-us-dropdown {
+		display: none;
+	}
 }
 
 
@@ -720,6 +727,44 @@ a:hover,
 	padding-bottom: 15px;
 }
 
+
+
+/**
+ * Book now
+ */
+
+.book-accomodations-wrap {
+	text-align: center;
+}
+.book-accomodations {
+	text-align: center;
+	padding: 20px;
+	font-size: 18px;
+	font-weight: 300;
+	background-color: rgb(164, 194, 204);
+	box-shadow: 0 3px 5px 0 rgba(0,0,0,0.2);
+	display: inline-block;
+	cursor: pointer;
+}
+.book-accomodations:hover {
+
+}
+
+.contact-us-dropdown {
+	position: absolute;
+	right: 0;
+	top: 15vh;
+	padding: 5px 10px;
+	font-size: 12px;
+	font-weight: 300;
+	margin: 0 10px;
+	background: rgba(255, 255, 255, 0.58);
+	line-height: 18px;
+}
+.contact-us-title {
+	font-size: 15px;
+	font-weight: normal;
+}
 
 
 /* definitely mobile */
