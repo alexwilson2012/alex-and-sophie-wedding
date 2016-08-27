@@ -32,14 +32,6 @@
 
 	$('.mobile-next-nav').on('click', '.mobile-next-btn', changePageFromDataId);
 
-	$('.book-accomodations').on('click', function(){
-		changePageFromDataId.call({
-			getAttribute: function(){
-				return 'accomodations';
-			}
-		});
-	});
-
 	function updateMobileNavLinks() {
 		var $activeLink = $('.nav-content.active'),
 			$navLinks = $('.nav-link'),
@@ -123,6 +115,13 @@
 		countable_time.days = countable_time.hours/24 >> 0;
 		countable_time.weeks = countable_time.days/7 >> 0;
 
+		if (millisecond_difference < 0) {
+			$('#time').html('Happily Married!')
+				.siblings('.countdown-text').remove();
+			clearInterval(interval);
+			return;
+		}
+
 		$('#time').html('');
 		$('#time')
 			// .append(countable_time.weeks.toLocaleString() + ' weeks<br>')
@@ -144,7 +143,7 @@
 
 	updateCounter();
 
-	setInterval(function(){
+	var interval = setInterval(function(){
 		updateCounter();
 	}, 1000);
 
